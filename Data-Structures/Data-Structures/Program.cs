@@ -1,4 +1,5 @@
-﻿using Data_Structures.Data_structures.Array_Reverse;
+﻿using Data_Structures.Data_structures.Array_Insert_Shift;
+using Data_Structures.Data_structures.Array_Reverse;
 using System;
 
 namespace Data_Structures
@@ -7,8 +8,21 @@ namespace Data_Structures
     {
         static void Main(string[] args)
         {
+            /*
             int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
             int[] output = Array_Reverse.reverseArray(arr);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < output.Length; i++)
+            {
+                Console.Write(output[i] + " ");
+            }
+            */
+            int[] arr = { 1, 2, 3, 4, 5, 6 };
+            int[] output = Array_Insert_Shift.arrayInsertShift(arr, 999);
             for (int i = 0; i < arr.Length; i++)
             {
                 Console.Write(arr[i] + " ");
