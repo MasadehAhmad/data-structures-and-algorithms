@@ -28,6 +28,7 @@ namespace Data_Structures.Data_structures.Linked_List
             Node node = new Node(value);
             node.next = head;
             node.last = null;
+            head.last = node;
             head = node;
             
         }
