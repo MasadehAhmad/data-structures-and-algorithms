@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Data-Structures",
-    "\\Data-Structures\\Data-Structures"
+    "\\Data-Structures\\Data-Structures",
+    "\\Data-Structures\\Data-Structures\\Data-structures",
+    "\\Data-Structures\\Data-Structures\\Data-structures\\Linked-List"
   ],
-  "SelectedNode": "\\Data-Structures\\Data-Structures\\Program.cs",
+  "SelectedNode": "\\Data-Structures\\Data-Structures\\Data-structures\\Linked-List\\Linked-List.cs",
   "PreviewInSolutionExplorer": false
 }

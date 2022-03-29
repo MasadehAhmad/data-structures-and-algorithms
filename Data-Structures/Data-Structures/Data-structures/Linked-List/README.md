@@ -5,9 +5,10 @@ We create a Linked List
 The Challenge is to create a Linked List and some method like insart and includes and ToString
 
 ## Approach & Efficiency
-The creation will take O(1) complexity
-The insart method will take O(1) complexity
-The ToString method will take O(n) complexity
+The creation will take O(1) space and time complexity
+The includes method will take O(1) for space complexity and O(n) time complexity
+The insart method will take O(1) space and time complexity
+The ToString method will take O(n) for the time complexity and O(1) for the space complexity
 
 ## API
 insert

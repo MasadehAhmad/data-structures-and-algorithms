@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace Data_Structures.Data_structures.Linked_List
 {
-    internal class Linked_List
+    public class Node
     {
-        public class Node
+        public int value;
+        public Node last;
+        public Node next;
+        public Node(int value)
         {
-            public int value;
-            public Node last;
-            public Node next;
-            public Node(int value)
-            {
-                this.value = value;
-                next = null;
-                last = null;
-            }
+            this.value = value;
+            next = null;
         }
+    }
+    public class Linked_List
+    {
+       
 
         public Node head;
 
@@ -27,8 +27,6 @@ namespace Data_Structures.Data_structures.Linked_List
         {
             Node node = new Node(value);
             node.next = head;
-            node.last = null;
-            head.last = node;
             head = node;
             
         }
