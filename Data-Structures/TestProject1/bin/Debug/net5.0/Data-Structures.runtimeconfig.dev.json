@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Tomcat00\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Tomcat00\\.nuget\\packages"
+    ]
+  }
+}
