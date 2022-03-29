@@ -51,7 +51,7 @@ namespace TestProject1
             Assert.True(list.includes(88));
         }
         [Fact]
-        public void IncludesNotFoundTest()
+        public void notFoundTest()
         {
             Linked_List list = new();
             list.insert(5);
@@ -61,7 +61,7 @@ namespace TestProject1
             Assert.False(list.includes(55));
         }
         [Fact]
-        public void ValesTest()
+        public void checkValue()
         {
             Linked_List list = new();
             list.insert(11);
