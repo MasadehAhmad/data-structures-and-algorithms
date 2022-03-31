@@ -17,7 +17,7 @@ namespace Data_Structures.Data_structures.Linked_List
             next = null;
         }
     }
-    public class Linked_List
+    public class linkedList
     {
        
 
