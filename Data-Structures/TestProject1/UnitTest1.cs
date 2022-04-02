@@ -1,5 +1,6 @@
 using Data_Structures.Data_structures.Linked_List;
 using Data_Structures.Data_structures.Linked_List_Insertions;
+using Data_Structures.Data_structures.linked_list_kth;
 using System;
 using Xunit;
 
@@ -18,7 +19,7 @@ namespace TestProject1
         {
             linkedList list = new ();
             list.insert(55);
-            Node current = list.head;
+            Data_Structures.Data_structures.Linked_List.Node current = list.head;
             Assert.Equal(55, current.value);
         }
         [Fact]
@@ -28,7 +29,7 @@ namespace TestProject1
             list.insert(5);
             list.insert(10);
             list.insert(9);
-            Node current = list.head;
+            Data_Structures.Data_structures.Linked_List.Node current = list.head;
             Assert.Equal(9, current.value);
         }
         [Fact]
@@ -38,7 +39,7 @@ namespace TestProject1
             list.insert(1);
             list.insert(2);
             list.insert(3);
-            Node current = list.head;
+            Data_Structures.Data_structures.Linked_List.Node current = list.head;
             Assert.Equal(3, current.value);
         }
         [Fact]
@@ -80,7 +81,7 @@ namespace TestProject1
         {
             linkedListInsertions list = new();
             list.append(5);
-            Node current = list.head;
+            Data_Structures.Data_structures.Linked_List.Node current = list.head;
             while (current.next != null)
             {
                 current = current.next;
@@ -96,7 +97,7 @@ namespace TestProject1
             list.append(10);
             list.append(44);
             list.append(75);
-            Node current = list.head;
+            Data_Structures.Data_structures.Linked_List.Node current = list.head;
             while (current.next != null)
             {
                 current = current.next;
@@ -113,7 +114,7 @@ namespace TestProject1
             list.append(44);
             list.append(75);
             list.insertBefore(44, 99);
-            Node current = list.head;
+            Data_Structures.Data_structures.Linked_List.Node current = list.head;
             while (current.next.value != 44)
             {
                 current = current.next;
@@ -140,7 +141,7 @@ namespace TestProject1
             list.append(44);
             list.append(75);
             list.insertAfter(44, 77);
-            Node current = list.head;
+            Data_Structures.Data_structures.Linked_List.Node current = list.head;
             while (current.value != 44)
             {
                 current = current.next;
@@ -158,7 +159,54 @@ namespace TestProject1
             list.insertAfter(5, 66);
             Assert.Equal(66, list.head.next.value);
         }
-
+        [Fact]
+        public void kGreaterThanLength()
+        {
+            linked_list_kth list = new();
+            list.append(5);
+            list.append(10);
+            list.append(44);
+            list.append(75);
+            Assert.Throws<IndexOutOfRangeException>(() =>list.kthElemante(5));
+        }
+        [Fact]
+        public void kNotPositive()
+        {
+            linked_list_kth list = new();
+            list.append(5);
+            list.append(10);
+            list.append(44);
+            list.append(75);
+            Assert.Throws<Exception>(() => list.kthElemante(-5));
+        }
+        [Fact]
+        public void kSameAsLength()
+        {
+            linked_list_kth list = new();
+            list.append(5);
+            list.append(10);
+            list.append(44);
+            list.append(75);
+            Assert.Equal(5,list.kthElemante(3));
+        }
+        [Fact]
+        public void kLength1()
+        {
+            linked_list_kth list = new();
+            list.append(5);
+            Assert.Equal(5, list.kthElemante(0));
+        }
+        [Fact]
+        public void kthElemanteTest()
+        {
+            linked_list_kth list = new();
+            list.append(5);
+            list.append(10);
+            list.append(44);
+            list.append(75);
+            list.append(55);
+            Assert.Equal(44, list.kthElemante(2));
+        }
     }
 
 

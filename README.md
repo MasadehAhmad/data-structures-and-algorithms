@@ -10,6 +10,4 @@ This repo for Data Structures and Algorithms Challenges
 |3|[Array-Binary-Search](./Data-Structures/Data-Structures/Data-structures/Array-Binary-Search/)
 |4|[Linked-List](./Data-Structures/Data-Structures/Data-structures/Linked-List/)
 |5|[Linked-List-Insertions](./Data-Structures/Data-Structures/Data-structures/Linked-List-Insertions/)
-
-
-Linked-List-Insertions
+|6|[linked-list-kth](./Data-Structures/Data-Structures/Data-structures/linked-list-kth/)
