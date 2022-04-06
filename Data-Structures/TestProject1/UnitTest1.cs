@@ -1,6 +1,7 @@
 using Data_Structures.Data_structures.Linked_List;
 using Data_Structures.Data_structures.Linked_List_Insertions;
 using Data_Structures.Data_structures.linked_list_kth;
+using Data_Structures.Data_structures.Array_Binary_Search.linked_list_zip;
 using System;
 using Xunit;
 
@@ -11,13 +12,13 @@ namespace TestProject1
         [Fact]
         public void emptyLinked_List()
         {
-            linkedList list = new ();
+            LinkedList list = new ();
             Assert.Null(list.head);
         }
         [Fact]
         public void insertionTest()
         {
-            linkedList list = new ();
+            LinkedList list = new ();
             list.insert(55);
             Data_Structures.Data_structures.Linked_List.Node current = list.head;
             Assert.Equal(55, current.value);
@@ -25,7 +26,7 @@ namespace TestProject1
         [Fact]
         public void firstNodeIsHead()
         {
-            linkedList list = new ();
+            LinkedList list = new ();
             list.insert(5);
             list.insert(10);
             list.insert(9);
@@ -35,7 +36,7 @@ namespace TestProject1
         [Fact]
         public void InsertMultipleNodesTest()
         {
-            linkedList list = new();
+            LinkedList list = new();
             list.insert(1);
             list.insert(2);
             list.insert(3);
@@ -45,7 +46,7 @@ namespace TestProject1
         [Fact]
         public void isIncludesTest()
         {
-            linkedList list = new();
+            LinkedList list = new();
             list.insert(5);
             list.insert(10);
             list.insert(88);
@@ -55,7 +56,7 @@ namespace TestProject1
         [Fact]
         public void notFoundTest()
         {
-            linkedList list = new();
+            LinkedList list = new();
             list.insert(5);
             list.insert(10);
             list.insert(88);
@@ -65,7 +66,7 @@ namespace TestProject1
         [Fact]
         public void checkValue()
         {
-            linkedList list = new();
+            LinkedList list = new();
             list.insert(11);
             list.insert(22);
             list.insert(33);
@@ -207,6 +208,61 @@ namespace TestProject1
             list.append(55);
             Assert.Equal(44, list.kthElemante(2));
         }
+
+
+
+
+
+        [Fact]
+        public void zipTestSameLength()
+        {
+            linkedListInsertions list1 = new();
+            list1.append(5);
+            list1.append(10);
+            list1.append(44);
+            list1.append(75);
+            linkedListInsertions list2 = new();
+            list2.append(7);
+            list2.append(16);
+            list2.append(96);
+            list2.append(788);
+            linkedListInsertions newList = linkedlistZip.Zip(list1, list2);
+            Assert.Equal("[5] -> [7] -> [10] -> [16] -> [44] -> [96] -> [75] -> [788] -> NULL", newList.toString()); 
+
+        }
+        [Fact]
+        public void zipTestSameList2Longer()
+        {
+            linkedListInsertions list1 = new();
+            list1.append(5);
+            list1.append(10);
+            list1.append(44);
+            linkedListInsertions list2 = new();
+            list2.append(7);
+            list2.append(16);
+            list2.append(96);
+            list2.append(788);
+            linkedListInsertions newList = linkedlistZip.Zip(list1, list2);
+            Assert.Equal("[5] -> [7] -> [10] -> [16] -> [44] -> [96] -> [788] -> NULL", newList.toString());
+
+        }
+        [Fact]
+        public void zipTestList1longer()
+        {
+            linkedListInsertions list1 = new();
+            list1.append(5);
+            list1.append(10);
+            list1.append(44);
+            list1.append(75);
+            linkedListInsertions list2 = new();
+            list2.append(7);
+            list2.append(16);
+            list2.append(96);
+            linkedListInsertions newList = linkedlistZip.Zip(list1, list2);
+            Assert.Equal("[5] -> [7] -> [10] -> [16] -> [44] -> [96] -> [75] -> NULL", newList.toString());
+
+        }
+
     }
 
 
