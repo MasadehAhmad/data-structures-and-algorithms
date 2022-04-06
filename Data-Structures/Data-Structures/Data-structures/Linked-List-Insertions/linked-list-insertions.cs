@@ -7,7 +7,7 @@ using Data_Structures.Data_structures.Linked_List;
 
 namespace Data_Structures.Data_structures.Linked_List_Insertions
 {
-    public class linkedListInsertions : linkedList
+    public class linkedListInsertions : LinkedList
     {
         public void append(int value)
         {

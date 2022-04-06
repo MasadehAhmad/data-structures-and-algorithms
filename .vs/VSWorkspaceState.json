@@ -5,8 +5,9 @@
     "\\Data-Structures\\Data-Structures",
     "\\Data-Structures\\Data-Structures\\Data-structures",
     "\\Data-Structures\\Data-Structures\\Data-structures\\Linked-List",
+    "\\Data-Structures\\Data-Structures\\Data-structures\\linked-list-kth",
     "\\Data-Structures\\TestProject1"
   ],
-  "SelectedNode": "\\Data-Structures\\TestProject1\\UnitTest1.cs",
+  "SelectedNode": "\\Data-Structures\\Data-Structures\\Data-structures\\linked-list-kth\\linked-list-kth.cs",
   "PreviewInSolutionExplorer": false
 }
