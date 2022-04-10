@@ -163,50 +163,50 @@ namespace TestProject1
         [Fact]
         public void kGreaterThanLength()
         {
-            linked_list_kth list = new();
+            linkedListkth list = new();
             list.append(5);
             list.append(10);
             list.append(44);
             list.append(75);
-            Assert.Throws<IndexOutOfRangeException>(() =>list.kthElemante(5));
+            Assert.Throws<IndexOutOfRangeException>(() =>list.kthElemante(5, list));
         }
         [Fact]
         public void kNotPositive()
         {
-            linked_list_kth list = new();
+            linkedListkth list = new();
             list.append(5);
             list.append(10);
             list.append(44);
             list.append(75);
-            Assert.Throws<Exception>(() => list.kthElemante(-5));
+            Assert.Throws<Exception>(() => list.kthElemante(-5, list));
         }
         [Fact]
         public void kSameAsLength()
         {
-            linked_list_kth list = new();
+            linkedListkth list = new();
             list.append(5);
             list.append(10);
             list.append(44);
             list.append(75);
-            Assert.Equal(5,list.kthElemante(3));
+            Assert.Equal(5,list.kthElemante(3, list));
         }
         [Fact]
         public void kLength1()
         {
-            linked_list_kth list = new();
+            linkedListkth list = new();
             list.append(5);
-            Assert.Equal(5, list.kthElemante(0));
+            Assert.Equal(5, list.kthElemante(0, list));
         }
         [Fact]
         public void kthElemanteTest()
         {
-            linked_list_kth list = new();
+            linkedListkth list = new();
             list.append(5);
             list.append(10);
             list.append(44);
             list.append(75);
             list.append(55);
-            Assert.Equal(44, list.kthElemante(2));
+            Assert.Equal(44, list.kthElemante(2, list));
         }
 
 

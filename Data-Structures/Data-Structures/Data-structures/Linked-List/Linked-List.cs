@@ -20,14 +20,15 @@ namespace Data_Structures.Data_structures.Linked_List
     public class LinkedList
     {
        
-
+        public int count = 0;
         public Node head;
-
+        
         public void insert(int value)
         {
             Node node = new Node(value);
             node.next = head;
             head = node;
+            count++;
             
         }
 

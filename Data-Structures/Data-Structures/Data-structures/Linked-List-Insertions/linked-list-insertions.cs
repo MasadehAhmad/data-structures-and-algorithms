@@ -15,6 +15,7 @@ namespace Data_Structures.Data_structures.Linked_List_Insertions
             if (head == null)
             {
                 head = newNode;
+                count++;
                 return;
             }
             Node current = head;
@@ -23,6 +24,7 @@ namespace Data_Structures.Data_structures.Linked_List_Insertions
                 current = current.next; 
             }
             current.next= newNode;
+            count++;
 
         }
         public void insertBefore(int value,int newValue)
@@ -45,6 +47,7 @@ namespace Data_Structures.Data_structures.Linked_List_Insertions
                 {
                     newNode.next = current.next;
                     current.next = newNode;
+                    count++;
                     return;
                 }
                 current = current.next;
@@ -67,6 +70,7 @@ namespace Data_Structures.Data_structures.Linked_List_Insertions
                 {
                     newNode.next = current.next.next;
                     current.next = newNode;
+                    count++;
                     return;
                 }
                 current = current.next;
