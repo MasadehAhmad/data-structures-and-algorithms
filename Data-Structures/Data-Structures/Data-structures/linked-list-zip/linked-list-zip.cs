@@ -8,7 +8,7 @@ using Data_Structures.Data_structures.Linked_List_Insertions;
 
 
 
-namespace Data_Structures.Data_structures.Array_Binary_Search.linked_list_zip
+namespace Data_Structures.Data_structures.linked_list_zip
 {
     public class linkedlistZip : linkedListInsertions
     {

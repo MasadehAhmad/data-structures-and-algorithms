@@ -1,7 +1,7 @@
 using Data_Structures.Data_structures.Linked_List;
 using Data_Structures.Data_structures.Linked_List_Insertions;
 using Data_Structures.Data_structures.linked_list_kth;
-using Data_Structures.Data_structures.Array_Binary_Search.linked_list_zip;
+using Data_Structures.Data_structures.linked_list_zip;
 using System;
 using Xunit;
 
