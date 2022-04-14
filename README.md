@@ -11,3 +11,6 @@ This repo for Data Structures and Algorithms Challenges
 |4|[Linked-List](./Data-Structures/Data-Structures/Data-structures/Linked-List/)
 |5|[Linked-List-Insertions](./Data-Structures/Data-Structures/Data-structures/Linked-List-Insertions/)
 |6|[linked-list-kth](./Data-Structures/Data-Structures/Data-structures/linked-list-kth/)
+|7|[stack-and-queue](./Data-Structures/Data-Structures/Data-structures/stack-and-queue/)
+
+
