@@ -231,7 +231,7 @@ namespace TestProject1
 
         }
         [Fact]
-        public void zipTestSameList2Longer()
+        public void zipTestList2Longer()
         {
             linkedListInsertions list1 = new();
             list1.append(5);
