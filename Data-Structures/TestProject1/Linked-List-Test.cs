@@ -7,7 +7,7 @@ using Xunit;
 
 namespace TestProject1
 {
-    public class UnitTest1
+    public class LinkedListTest
     {
         [Fact]
         public void emptyLinked_List()
