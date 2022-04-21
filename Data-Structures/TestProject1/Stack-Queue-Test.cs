@@ -8,7 +8,7 @@ using Xunit;
 
 namespace TestProject1
 {
-    public class _1
+    public class StackQueueTest
     {
         [Fact]
         public void StackPush()
