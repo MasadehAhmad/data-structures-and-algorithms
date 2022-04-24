@@ -8,60 +8,42 @@ namespace Data_Structures.Data_structures.stack_queue_animal_shelter
 {
 
 
-    public class Dog
+    public class Animal
     {
         public string name { get; set; }
         public int age { get; set; }
-        public bool Equals(string dog)
-        {
-            return true;
-        }
+        public string type { get; set; }
+        
     }
-    public class Cat
-    {
-        public string name { get; set; }
-        public int age { get; set; }
-        public bool Equals(string cat)
-        {
-            return true;
-        }
-    }
+ 
     public class AnimalShelter
     {
-        Queue<object> queue = new Queue<object>();
+        Queue<Animal> queue = new Queue<Animal>();
 
-        public void Enqueue(Cat animal)
+        public void Enqueue(Animal animal)
         {
-            queue.Enqueue(animal);
+            if (animal.type == "cat" || animal.type == "dog") queue.Enqueue(animal);
         }
-        public void Enqueue(Dog animal)
+       
+        public Animal Dequeue(string pref)
         {
-            queue.Enqueue(animal);
-        }
-        public object Dequeue(string pref)
-        {
-            object obj = null;
-            Queue<object> temp = new Queue<object>();
+            Animal obj = null;
+            Queue<Animal> temp = new Queue<Animal>();
             bool flag = true;
-            if (pref != "cat" || pref !="dog") return null;
-
-            if (queue.First().Equals(pref)) return queue.Dequeue();
-            else 
+            while (queue.Count !=0)
             {
-                while (queue.Count!=0)
+                if (queue.First().type == pref && flag)
                 {
-                    temp.Enqueue(queue.Dequeue());
-                    if (queue.First().Equals(pref) && flag)
-                    {
-                        obj = queue.Dequeue();
-                        flag = false;
-                    }
+                    obj = queue.Dequeue();
+                    flag = false;
                 }
+                temp.Enqueue(queue.Dequeue());
+            }
                 while (temp.Count != 0)
                 {
                     queue.Enqueue(temp.Dequeue());
                 }
-            }
+
             return obj;
         }
 
