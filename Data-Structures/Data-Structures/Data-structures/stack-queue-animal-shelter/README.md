@@ -2,6 +2,9 @@
 Create a class called AnimalShelter which holds only dogs and cats.
 The shelter operates using a first-in, first-out approach.
 
+## Whiteboard Process
+![image](./Whiteboard.png)
+
 ## Approach & Efficiency
 Enqueue method has O(1) time and space complexite
 
