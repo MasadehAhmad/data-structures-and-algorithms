@@ -17,12 +17,14 @@ namespace Data_Structures.Data_structures.Trees
     public class BinaryTree
     {
         public Node Root { get; set; }
+        public bool flag { get; set; }
         public List<int> list { get; set; }
 
         public BinaryTree()
         {
             Root = null;
             list = new List<int>();
+            flag = false;
         }
         public int[] InOrder(Node Root)
         {
@@ -92,13 +94,23 @@ namespace Data_Structures.Data_structures.Trees
                     parent.Right = newNode;
             }
         }
+        public void search(Node Root, int value)
+        {
+            if (this.Root == Root) flag = false;
+            if (Root.Left != null)
+                search(Root.Left, value);
+
+
+            if (Root.Right != null)
+                search(Root.Right, value);
+
+            if (Root.Data == value) flag = true;
+
+        }
         public bool contains(int value)
         {
-            int[] arr = InOrder(this.Root);
-            foreach (int i in arr)
-                if (i == value) return true;
-            return false;
-
+            search(this.Root, value);
+            return flag;
         }
 
 
