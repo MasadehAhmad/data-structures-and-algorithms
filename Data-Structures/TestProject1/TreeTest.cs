@@ -96,5 +96,20 @@ namespace TestProject1
             Assert.Equal(12, tree.GetMax(tree.Root));
             Assert.NotEqual(10, tree.GetMax(tree.Root));
         }
+
+        [Fact]
+        public void BFTest()
+        {
+            TreeBreadthFirst tree = new TreeBreadthFirst();
+            tree.Add(5);
+            tree.Add(2);
+            tree.Add(12);
+            tree.Add(1);
+            tree.Add(2);
+            tree.Add(10);
+            int[] arr = { 5,2,12,1,2,10};
+            Assert.Equal(arr, tree.breadthFirst(tree.Root));
+            
+        }
     }
 }
