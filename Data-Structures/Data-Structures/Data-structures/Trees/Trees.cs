@@ -38,7 +38,7 @@ namespace Data_Structures.Data_structures.Trees
                 InOrder(Root.Right);
             return list.ToArray();
         }
-        public int[] PreOrder(Node Root)
+        public List<int> PreOrder(Node Root)
         {
             if (this.Root == Root) list.Clear();
             list.Add(Root.Data);
@@ -49,7 +49,7 @@ namespace Data_Structures.Data_structures.Trees
 
             if (Root.Right != null)
                 PreOrder(Root.Right);
-            return list.ToArray();
+            return list;
         }
         public int[] PostOrder(Node Root)
         {

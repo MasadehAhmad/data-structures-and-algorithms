@@ -93,8 +93,8 @@ namespace TestProject1
             tree.Add(1);
             tree.Add(2);
             tree.Add(10);
-            Assert.Equal(12, tree.GetMax(tree.Root));
-            Assert.NotEqual(10, tree.GetMax(tree.Root));
+            Assert.Equal(12, tree.GetMax());
+            Assert.NotEqual(10, tree.GetMax());
         }
 
         [Fact]

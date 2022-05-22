@@ -35,18 +35,11 @@ namespace Data_Structures.Data_structures.Trees
                     parent.Right = newNode;
             }
         }
-        public int GetMax(Node Root)
+        public int GetMax()
         {
-            if (this.Root == Root) max = Root.Data;
+            List<int> list = this.PreOrder(this.Root);
+            return list.Max();
 
-            if (Root.Left != null)
-                GetMax(Root.Left);
-
-            if (Root.Right != null)
-                GetMax(Root.Right);
-
-            if (Root.Data > max) max = Root.Data;
-            return max;
         }
     }
 }
