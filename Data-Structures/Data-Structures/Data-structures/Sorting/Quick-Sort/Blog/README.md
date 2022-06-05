@@ -34,10 +34,56 @@ ALGORITHM Swap(arr, i, low)
     arr[i] <-- arr[low]
     arr[low] <-- temp
 ```
+# C# Code
+```
+ public static void QuickSortMethod(int[] arr, int left, int right)
+        {
+            if (left < right)
+            {
+                int position = Partition(arr, left, right);
+                QuickSortMethod(arr, left, position - 1);
+                QuickSortMethod(arr, position + 1, right);
+            }
+        }
 
+        public static int Partition(int[] arr, int left, int right)
+        {
+            int pivot = arr[right];
+            int low = left - 1;
+
+            for (int i = left; i < right; i++)
+            {
+                if (arr[i] <= pivot)
+                {
+                    low++;
+                    Swap(arr, i, low);
+                }
+            }
+            Swap(arr, right, low + 1);
+            return low + 1;
+        }
+
+        public static void Swap(int[] arr, int i, int low)
+        {
+            int temp = arr[i];
+            arr[i] = arr[low];
+            arr[low] = temp;
+        }
+```
 # Complexity
-Time: O(n^2)
-Space: O(1)
+Worst Case Complexity - In quick sort, worst case occurs when the pivot element is either greatest or smallest element. Suppose, if the pivot element is always the last element of the array, the worst case would occur when the given array is sorted already in ascending or descending order. The worst-case time complexity of quicksort is O(n2).
 
 # Example
 ![](QS.png)
+1. Select any splitting value, say L. The splitting value is also known as Pivot.
+2. Divide the stack of papers into two. A-L and M-Z. It is not necessary that the piles should be equal.
+3. Repeat the above two steps with the A-L pile, splitting it into its significant two halves. And M-Z pile, split into its halves. The process is repeated until the piles are small enough to be sorted easily.
+4. Ultimately, the smaller piles can be placed one on top of the other to produce a fully sorted and ordered set of papers.
+5. The approach used here is reduction at each split to get to the single-element array.
+6. At every split, the pile was divided and then the same approach was used for the smaller piles by using the method of recursion.
+
+Technically, quick sort follows the below steps:
+- Step 1 − Make any element as pivot
+- Step 2 − Partition the array on the basis of pivot
+- Step 3 − Apply quick sort on left partition recursively
+- Step 4 − Apply quick sort on right partition recursively
