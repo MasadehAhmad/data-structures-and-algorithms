@@ -4,10 +4,11 @@
     "\\Data-Structures",
     "\\Data-Structures\\Data-Structures",
     "\\Data-Structures\\Data-Structures\\Data-structures",
+    "\\Data-Structures\\Data-Structures\\Data-structures\\Insertion-Sort",
     "\\Data-Structures\\Data-Structures\\Data-structures\\Linked-List",
     "\\Data-Structures\\Data-Structures\\Data-structures\\linked-list-kth",
     "\\Data-Structures\\TestProject1"
   ],
-  "SelectedNode": "\\Data-Structures\\TestProject1\\TreeTest.cs",
+  "SelectedNode": "\\Data-Structures\\Data-Structures\\Data-structures\\Insertion-Sort\\InsertionSort.cs",
   "PreviewInSolutionExplorer": false
 }
