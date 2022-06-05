@@ -4,11 +4,12 @@
     "\\Data-Structures",
     "\\Data-Structures\\Data-Structures",
     "\\Data-Structures\\Data-Structures\\Data-structures",
-    "\\Data-Structures\\Data-Structures\\Data-structures\\Insertion-Sort",
     "\\Data-Structures\\Data-Structures\\Data-structures\\Linked-List",
     "\\Data-Structures\\Data-Structures\\Data-structures\\linked-list-kth",
+    "\\Data-Structures\\Data-Structures\\Data-structures\\Sorting",
+    "\\Data-Structures\\Data-Structures\\Data-structures\\Sorting\\Merge-Sort",
     "\\Data-Structures\\TestProject1"
   ],
-  "SelectedNode": "\\Data-Structures\\Data-Structures\\Data-structures\\Insertion-Sort\\InsertionSort.cs",
+  "SelectedNode": "\\Data-Structures\\Data-Structures\\Data-structures\\Sorting\\Merge-Sort\\MergeSort.cs",
   "PreviewInSolutionExplorer": false
 }
