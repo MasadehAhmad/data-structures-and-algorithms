@@ -8,7 +8,16 @@ namespace Data_Structures.Data_structures.hashtable
 {
     public class Hashtable
     {
-        public List<Dictionary<int, int>> hashTable;
+        public Dictionary<int, int> [] hashTable ;
+
+        public Hashtable()
+        {
+            hashTable = new Dictionary<int, int> [getPrime(10)];
+            for(int i = 0; i < hashTable.Length; i++)
+            {
+                hashTable[i] = new Dictionary<int, int>();
+            }
+        }
         public bool checkPrime(int n)
         {
             if (n == 1 || n == 0) return false;
@@ -35,7 +44,7 @@ namespace Data_Structures.Data_structures.hashtable
         public void set(int key , int value)
         {
             int index = hashFunction(key);
-            hashTable[index].Add(key,value);
+            hashTable[index].Add(key, value);
         }
         public int get(int key)
         {
