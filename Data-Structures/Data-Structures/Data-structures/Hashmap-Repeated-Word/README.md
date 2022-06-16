@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+# Challenge Summary
+Write a function called repeated word that finds the first word to occur more than once in a string
 
-namespace Data_Structures.Data_structures.Hashmap_Repeated_Word
-{
-    public class HashmapRepeatedWord
-    {
-        public static string RepeatedWord(string input)
+## Whiteboard Process
+![](./Whiteboard.png)
+
+## Approach & Efficiency
+Complexity : O(n*2) for the time because the nested loop
+and O(n) for the space for the split the string 
+
+## Solution
+```
+ public static string RepeatedWord(string input)
         {
             input = input.Replace(",", "");
             input = input.ToLower();
@@ -25,5 +27,4 @@ namespace Data_Structures.Data_structures.Hashmap_Repeated_Word
             }
             return null;    
         }
-    }
-}
+```
