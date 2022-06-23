@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Data_Structures.Data_structures.stack_queue_pseudo;
 using Xunit;
-using Data_Structures.Data_structures.stack_queue_pseudo;
 
 namespace TestProject1
 {
@@ -18,7 +13,7 @@ namespace TestProject1
             sq.Enqueue(15);
             sq.Enqueue(10);
             sq.Enqueue(5);
-            Assert.Equal(20,sq.Dequeue());
+            Assert.Equal(20, sq.Dequeue());
             Assert.Equal(15, sq.Dequeue());
         }
     }
