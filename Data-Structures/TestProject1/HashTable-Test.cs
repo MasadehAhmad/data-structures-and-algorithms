@@ -1,10 +1,6 @@
-﻿using System;
+﻿using Data_Structures.Data_structures.hashtable;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
-using Data_Structures.Data_structures.hashtable;
 namespace TestProject1
 {
     public class HashTable_Test
@@ -15,7 +11,7 @@ namespace TestProject1
             Hashtable hashtable = new Hashtable();
             hashtable.set(5, 522);
             hashtable.set(4, 365);
-            Assert.Equal( 522,hashtable.get(5));
+            Assert.Equal(522, hashtable.get(5));
         }
         [Fact]
         public void keys_Test()
@@ -27,7 +23,7 @@ namespace TestProject1
             hashtable.set(77, 85596);
             Assert.Equal(new List<int> { 88, 77, 4, 5 }, hashtable.keys());
         }
-        [Fact] 
+        [Fact]
         public void containsTest()
         {
             Hashtable hashtable = new Hashtable();

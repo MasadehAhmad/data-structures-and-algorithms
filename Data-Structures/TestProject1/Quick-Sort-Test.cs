@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Data_Structures.Data_structures.Quick_Sort;
 using Xunit;
-using Data_Structures.Data_structures.Quick_Sort;
 namespace TestProject1
 {
     public class Quick_Sort_Test

@@ -17,17 +17,19 @@ namespace Data_Structures.Data_structures.graph
             Neighbors = new List<Node>();
         }
     }
-    public class graph
+    public class Graph
     {
         LinkedList<Node> Nodes { get; set; }
         
-        public graph()
+        public Graph()
         {
             Nodes = new LinkedList<Node>();
         }
-        public void addNode(char value)
+        public Node addNode(char value)
         {
-            Nodes.AddLast(new Node(value));
+            Node node = new Node(value);
+            Nodes.AddLast(node);
+            return node;
         }
         public void addEdge(Node node1, Node node2)
         {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Data_Structures.Data_structures.stack_queue_animal_shelter;
+﻿using Data_Structures.Data_structures.stack_queue_animal_shelter;
 using Xunit;
 
 namespace TestProject1
@@ -19,7 +14,7 @@ namespace TestProject1
             shelter.Enqueue(new Animal { name = "popy", age = 2, type = "dog" });
             shelter.Enqueue(new Animal { name = "popy", age = 2, type = "cat" });
             shelter.Enqueue(new Animal { name = "popy", age = 2, type = "fish" });
-            Assert.Equal("dog",shelter.Dequeue("dog").type);
+            Assert.Equal("dog", shelter.Dequeue("dog").type);
 
         }
         [Fact]

@@ -12,13 +12,13 @@ namespace TestProject1
         [Fact]
         public void emptyLinked_List()
         {
-            LinkedList list = new ();
+            LinkedList list = new();
             Assert.Null(list.head);
         }
         [Fact]
         public void insertionTest()
         {
-            LinkedList list = new ();
+            LinkedList list = new();
             list.insert(55);
             Data_Structures.Data_structures.Linked_List.Node current = list.head;
             Assert.Equal(55, current.value);
@@ -26,7 +26,7 @@ namespace TestProject1
         [Fact]
         public void firstNodeIsHead()
         {
-            LinkedList list = new ();
+            LinkedList list = new();
             list.insert(5);
             list.insert(10);
             list.insert(9);
@@ -168,7 +168,7 @@ namespace TestProject1
             list.append(10);
             list.append(44);
             list.append(75);
-            Assert.Throws<IndexOutOfRangeException>(() =>list.kthElemante(5, list));
+            Assert.Throws<IndexOutOfRangeException>(() => list.kthElemante(5, list));
         }
         [Fact]
         public void kNotPositive()
@@ -188,7 +188,7 @@ namespace TestProject1
             list.append(10);
             list.append(44);
             list.append(75);
-            Assert.Equal(5,list.kthElemante(3, list));
+            Assert.Equal(5, list.kthElemante(3, list));
         }
         [Fact]
         public void kLength1()
@@ -227,7 +227,7 @@ namespace TestProject1
             list2.append(96);
             list2.append(788);
             linkedListInsertions newList = linkedlistZip.Zip(list1, list2);
-            Assert.Equal("[5] -> [7] -> [10] -> [16] -> [44] -> [96] -> [75] -> [788] -> NULL", newList.toString()); 
+            Assert.Equal("[5] -> [7] -> [10] -> [16] -> [44] -> [96] -> [75] -> [788] -> NULL", newList.toString());
 
         }
         [Fact]
