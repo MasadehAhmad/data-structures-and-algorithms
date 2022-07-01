@@ -1,17 +1,18 @@
-﻿using Data_Structures.Data_structures.Array_Insert_Shift;
-using Data_Structures.Data_structures.Array_Reverse;
-using Data_Structures.Data_structures.Array_Binary_Search;
-using System;
-using Data_Structures.Data_structures.Trees.TreeFizzBuzz;
-using System.Collections.Generic;
+﻿using Data_Structures.Data_structures.graph;
 using Data_Structures.Data_structures.graph_depth_first;
-using Data_Structures.Data_structures.graph;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Xunit;
 
-namespace Data_Structures
+namespace TestProject1
 {
-    internal class Program
+    public class graph_depth_first_Test
     {
-        static void Main(string[] args)
+        [Fact]
+        public void Test()
         {
             GraphDepthFirst GD = new GraphDepthFirst();
             Node a = GD.addNode('a');
@@ -27,18 +28,13 @@ namespace Data_Structures
             GD.addEdge(a, b);
             GD.addEdge(b, d);
             GD.addEdge(b, c);
-            GD.addEdge(c, g); 
+            GD.addEdge(c, g);
             GD.addEdge(d, f);
             GD.addEdge(d, h);
             GD.addEdge(d, e);
             GD.addEdge(f, h);
             List<char> DFS = new List<char>() { 'a', 'b', 'c', 'g', 'd', 'e', 'h', 'f' };
-            foreach(char p in GD.DepthFirst(a))
-            {
-                Console.Write(',');
-                Console.Write(p);
-            }
-            
+            Assert.Equal(DFS, GD.DepthFirst(a));
         }
     }
 }
